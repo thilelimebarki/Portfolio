@@ -7,6 +7,9 @@
     <title>Contact</title>
 </head>
 <body>
+    <video autoplay muted loop class="background-video">
+        <source src="/videofond.mp4" type="video/mp4">    
+    </video>
     <header>
         <h1>Portfolio MEBARKI Thileli</h1>
         <nav class="nav-menu">
@@ -22,5 +25,28 @@
         </nav>
 
     </header>
+    <main>
+        <h2>Contactez-moi</h2>
+        <p> Pour toutes questions ou rensseignements veuillez remplir le formulaire ci-dessous :</p>
+
+        <form action="Message.php" method="post">
+            <label for="name">Nom :</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="objet">Objet :</label><br>
+            <input type="objet" id="objet" name="objet" required><br><br>
+
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </main>
+
+    <footer> © 2025 MEBARKI Thileli - Portfolio</footer>
+    
 </body>
 </html>
