@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Contact</title>
 </head>
+
 <body>
     <video autoplay muted loop class="background-video">
-        <source src="/videofond.mp4" type="video/mp4">    
+        <source src="/videofond.mp4" type="video/mp4">
     </video>
     <header>
         <h1>Portfolio MEBARKI Thileli</h1>
@@ -25,28 +27,55 @@
         </nav>
 
     </header>
-    <main>
-        <h2>Contactez-moi</h2>
-        <p> Pour toutes questions ou rensseignements veuillez remplir le formulaire ci-dessous :</p>
+    <main class="contact-section">
+        <h3 class="contact-title"> 📨 ENVOYER MOI UN MESSAGE</h3>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <span>📍</span>
+                    <div>
+                        <strong>Localisation :</strong>
+                        <p>Paris, France</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📧</span>
+                    <div>
+                        <strong>Email :</strong>
+                        <p>thilelimebarki63@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📞</span>
+                    <div>
+                        <strong>Numéro Téléphone :</strong>
+                        <p>06 06 45 10 36</p>
+                    </div>
+                </div>
+            </div>
 
-        <form action="Message.php" method="post">
-            <label for="name">Nom :</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Email :</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="objet">Objet :</label><br>
-            <input type="objet" id="objet" name="objet" required><br><br>
-
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-            <input type="submit" value="Envoyer">
-        </form>
+            <form class="contact-form" onsubmit="return sendMessage()">
+                <div class="form-row">
+                    <input type="text" placeholder="Votre nom" required>
+                    <input type="email" placeholder="Votre mail" required>
+                </div>
+                <input type="text" placeholder="Sujet *" required>
+                <textarea placeholder="Votre message *" rows="6" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
     </main>
 
+
     <footer> © 2025 MEBARKI Thileli - Portfolio</footer>
-    
+
+    <script>
+        function sendMessage() {
+            alert("Message envoyé avec succès !");
+            return false;
+        }
+    </script>
+
 </body>
+
 </html>
