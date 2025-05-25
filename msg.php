@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $objet = htmlspecialchars($_POST['objet']);
     
     // Sujet et adresse de destination
-    $to = "thilelimebarki63@gmail.com"; // Remplace avec ton adresse email
+    $to = "thilelimebarki63@gmail.com";
     $subject = "Nouveau message de votre portfolio";
 
     // Contenu du message

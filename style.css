@@ -179,8 +179,8 @@ section h2 , p {
 }
 
 .ecole_entreprise img{
-    width: 12cm;
-    height: 6cm;
+    width: 11cm;
+    height: 5cm;
 }
 
 
@@ -342,4 +342,36 @@ footer {
 
 .contact-form button:hover {
     background-color: #f4bcbc;
+}
+
+
+.carousel {
+    margin-bottom: 60px;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.carousel-track img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
