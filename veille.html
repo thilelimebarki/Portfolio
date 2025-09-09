@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Veille technologique</title>
 </head>
+
 <body>
     <video autoplay muted loop class="background-video">
-        <source src="/videofond.mp4" type="video/mp4">    
+        <source src="/videofond.mp4" type="video/mp4">
     </video>
     <header>
         <h1>Portfolio MEBARKI Thileli</h1>
@@ -25,6 +27,112 @@
         </nav>
     </header>
 
+    <main class="main-veille">
+        <!-- 1. Introduction -->
+        <h2>Qu'est ce que la veille technologique ?</h2>
+        <p class="intro">La veille technologique consiste à suivre les évolutions dans le domaine du numérique et de la
+            cybersécurité, afin d’anticiper les nouvelles menaces et opportunités.</p>
+
+        <!-- 2. Sujet de veille -->
+        <h2>À propos de ma veille</h2>
+        <p class="intro">Ma veille porte sur la <strong>cybersécurité</strong>, en particulier sur le
+            <strong>phishing</strong> et l’<strong>ingénierie sociale</strong>. L’objectif est de comprendre ces
+            attaques et d’identifier les solutions de protection adaptées.
+        </p>
+
+        <!-- 3. Outil de veille -->
+        <h2>Outil de veille</h2>
+        <div class="outil-veille">
+            <p>
+                <strong>Feedly</strong> est un agrégateur de flux RSS qui me permet de centraliser
+                différentes sources d’information et de suivre l’actualité en temps réel.
+            </p>
+            
+        </div>
+
+        <div class="abcd">
+            <img src="images/feedly.png" alt="Logo Feedly" class="feedly-logo">
+            <img src="images/capture-feedly.png" alt="Affichage feedly" class="capture-feedly">
+        </div>
+
+        <h3>Sources utilisées</h3>
+        <ul class="sources">
+            <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a></li>
+            <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI</a></li>
+            <li><a href="https://www.cnil.fr/" target="_blank">CNIL</a></li>
+            <li><a href="https://www.silicon.fr/" target="_blank">Silicon</a></li>
+        </ul>
+
+        <!-- 4. Articles -->
+        <h2>Articles intéressants</h2>
+        <div class="articles-grid">
+            <article class="card">
+                <img src="images/slam.png" alt="Article 1">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 1</a></h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/slam.png" alt="Article 2">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 2</a></h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/slam.png" alt="Article 3">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 3</a></h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/slam.png" alt="Article 4">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 4</a></h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/article5.jpg" alt="Article 5">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 5</a></h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/article6.jpg" alt="Article 6">
+                <div class="card-content">
+                    <p class="date">05 septembre 2025</p>
+                    <h3><a href="#">Titre de l’article 6</a></h3>
+                </div>
+            </article>
+        </div>
+        <details>
+            <summary>Annexes – bonnes pratiques utilisateur</summary>
+            <ul>
+                <li>Vérifier l’expéditeur, l’URL, l’orthographe ; se méfier de l’urgence.</li>
+                <li>Ne jamais scanner de QR code inconnu sur poste pro.</li>
+                <li>Activer le MFA partout, utiliser un gestionnaire de mots de passe.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Annexes – procédure incident phishing</summary>
+            <ul>
+                <li>Isoler le poste, changer mots de passe, révoquer sessions, ouvrir ticket.</li>
+                <li>Informer RSSI/DPO selon le cas, conserver les preuves.</li>
+                <li>Débriefer et mettre à jour la sensibilisation.</li>
+            </ul>
+        </details>
+    </main>
+
     <footer> © 2025 MEBARKI Thileli - Portfolio</footer>
 </body>
+
 </html>

@@ -10,7 +10,7 @@ body {
 /* En-tête */
 header {
     background-color: #1f6666;
-    color: #d36355;
+    color: #f4bcbc;
     padding: 20px 0;
     text-align: center;
 }
@@ -222,7 +222,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #1f6666;
-    color: #d36355;
+    color: #f4bcbc;
     text-align: center;
     padding: 5px 0;
 }
@@ -261,7 +261,6 @@ footer {
 
     max-width: 1200px;
     margin: 0 auto;
-    
     color: #fff;
     font-family: 'Arial', sans-serif;
 }
@@ -366,6 +365,148 @@ footer {
     object-fit: contain;
 }
 
+/* Style spécifique page veille */
+.main-veille {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px;
+    text-align: left;
+}
+
+/* Intro */
+.intro {
+    text-align: left;
+}
+.outil-veille {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.outil-veille p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.capture-feedly {
+    width: 700px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.feedly-logo {
+    width: 600px;   /* tu peux ajuster */
+    height: 300px;
+    margin-right: 20px;
+}
+.abcd {
+    display: inline-table;
+    gap: 30px;
+    
+}
+
+
+.sources {
+    margin-top: 0px;
+    padding-left: 20px;
+}
+
+.sources li {
+    margin: 5px 0;
+}
+
+.sources a {
+    color: #1f6666;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sources a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .outil-veille {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .outil-logo {
+        margin-top: 15px;
+    }
+}
+
+
+/* Articles grid */
+
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.card-content .date {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.card-content h3 a {
+    color: #1f6666;
+    text-decoration: none;
+}
+
+.card-content h3 a:hover {
+    text-decoration: underline;
+}
+
+details {
+    margin-top: 15px;
+    border: 1px solid #1f6666;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #1f6666;
+}
 @keyframes scroll {
     0% {
         transform: translateX(0);
