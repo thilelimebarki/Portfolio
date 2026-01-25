@@ -196,7 +196,7 @@ section h2 , p {
 
 .certi {
     max-width: 1000px;
-    margin: 20px 40px;
+    margin: 20px 20px;
     display: grid;
     grid-template-columns: 450px 450px 450px;
     gap: 10px;
