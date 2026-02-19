@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #000000;
-    
+
 }
 
 /* En-tête */
@@ -24,7 +24,7 @@ h2 {
     color: #1f6666;
 }
 
-h3{
+h3 {
     color: #1f6666;
 }
 
@@ -35,12 +35,12 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 20px;
-    
+
 }
 
 nav ul li a {
     color: #3BB0A0;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -51,7 +51,7 @@ nav ul li a:hover {
 .boutton {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1f6666 ; 
+    background-color: #1f6666;
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -59,29 +59,38 @@ nav ul li a:hover {
     margin: 0 10px;
 }
 
-.cv, .certifications, .Git {
+.cv,
+.certifications,
+.Git {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1f6666 ; 
+    background-color: #1f6666;
     color: white;
     text-decoration: none;
     font-size: 16px;
     border-radius: 5px;
     text-align: left;
-    
+
 }
 
-.cv{
+.certifications{
     margin: 0 10px;
-    margin-left: 300px;
 }
 
-.boutton:hover, .cv:hover, .certifications:hover, .Git:hover {
-    background-color:#d36355; 
+.cv {
+    margin: 0 10px;
+    margin-left: 200px;
+}
+
+.boutton:hover,
+.cv:hover,
+.certifications:hover,
+.Git:hover {
+    background-color: #d36355;
 }
 
 section {
-    
+
     padding: 20px;
     margin: 20px auto;
     max-width: 900px;
@@ -89,7 +98,7 @@ section {
     border-radius: 100%;
 }
 
-.presentation{
+.presentation {
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
@@ -100,32 +109,38 @@ section {
     border-radius: 100px;
 
 }
+
 .image-container {
     position: absolute;
-    left: 50px; /* Ajuste la distance depuis le bord gauche */
+    left: 50px;
+    /* Ajuste la distance depuis le bord gauche */
     top: 52%;
     transform: translateY(-50%);
 }
 
 .image-container img {
-    width: 300px; /* Ajuste la taille de l’image */
+    width: 300px;
+    /* Ajuste la taille de l’image */
     border-radius: 50%;
-    
+
 }
+
 .presentation p {
     text-align: left;
 }
 
-section h2 , p {
+section h2,
+p {
     text-align: center;
 }
 
 .flex-container p {
     text-align: left;
 }
+
 .flex-container {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     align-items: stretch;
     padding: 20px;
 }
@@ -150,26 +165,30 @@ section h2 , p {
     padding: 0;
     display: none;
 }
+
 .toggle-jobs {
     text-align: center;
     display: block;
-    margin: 15px auto; /* Centre horizontalement */
-    
+    margin: 15px auto;
+    /* Centre horizontalement */
+
 }
 
 .option li {
-    margin: 10px 50px ;
+    margin: 10px 50px;
     list-style-type: disc;
-    
+
 }
-.ecole_entreprise{
+
+.ecole_entreprise {
     display: flex;
     justify-content: space-around;
     margin: 30px;
     align-items: stretch;
 }
 
-.entreprise, .ecole {
+.entreprise,
+.ecole {
     width: 45%;
     padding: 20px;
     background-color: rgb(255, 255, 255, 0.5);
@@ -178,7 +197,7 @@ section h2 , p {
     text-align: center;
 }
 
-.ecole_entreprise img{
+.ecole_entreprise img {
     width: 11cm;
     height: 5cm;
 }
@@ -190,8 +209,10 @@ section h2 , p {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajuste la vidéo pour couvrir tout l'écran */
-    z-index: -1; /* Place la vidéo derrière le contenu */
+    object-fit: cover;
+    /* Ajuste la vidéo pour couvrir tout l'écran */
+    z-index: -1;
+    /* Place la vidéo derrière le contenu */
 }
 
 .certi {
@@ -209,7 +230,7 @@ section h2 , p {
     cursor: pointer;
     padding: 20px 40px;
     height: 100%;
-    
+
 }
 
 .certi img:hover {
@@ -229,11 +250,11 @@ footer {
 
 .projets {
     max-width: 1000px;
-    margin: 20px 40px;
+    margin: 20px 40px 60px 40px;
     display: grid;
-    grid-template-columns: 450px 450px 450px;
-    gap: 10px;
-
+    grid-template-columns: 460px 460px 460px;
+    column-gap: 25px;
+    /* row-gap: 4cm; */
 }
 
 .projets img {
@@ -241,8 +262,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 0px;
-    height: 100%;
-    
+    height: 450px;
 }
 
 .projets img:hover {
@@ -250,7 +270,7 @@ footer {
 
 }
 
-.projets h3{
+.projets h3 {
     color: #ffffff;
     text-align: start;
 }
@@ -378,6 +398,7 @@ footer {
 .intro {
     text-align: left;
 }
+
 .outil-veille {
     display: flex;
     gap: 15px;
@@ -397,14 +418,16 @@ footer {
 }
 
 .feedly-logo {
-    width: 600px;   /* tu peux ajuster */
+    width: 600px;
+    /* tu peux ajuster */
     height: 300px;
     margin-right: 20px;
 }
+
 .abcd {
     display: inline-table;
     gap: 30px;
-    
+
 }
 
 
@@ -446,7 +469,7 @@ footer {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     background-color: rgba(255, 255, 255, 0.01);
 }
@@ -514,11 +537,12 @@ summary {
 
 .TP-bts {
     text-align: center;
-    width: 700px;        /* largeur contrôlée */
+    width: 700px;
+    /* largeur contrôlée */
 
 }
 
-.TP-bts h3{
+.TP-bts h3 {
     color: #ffffff;
     font-size: 2em;
 }
@@ -533,8 +557,9 @@ summary {
     transform: scale(1.1);
 
 }
+
 .TP-bts a {
-margin-top: 20px;
+    margin-top: 20px;
 }
 
 @keyframes scroll {
