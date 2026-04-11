@@ -61,7 +61,7 @@ nav ul li a:hover {
 
 .cv,
 .certifications,
-.Git {
+.Fiche-presentative {
     display: inline-block;
     padding: 10px 20px;
     background-color: #1f6666;
@@ -85,7 +85,7 @@ nav ul li a:hover {
 .boutton:hover,
 .cv:hover,
 .certifications:hover,
-.Git:hover {
+.Fiche-presentative:hover {
     background-color: #d36355;
 }
 
@@ -254,7 +254,7 @@ footer {
     display: grid;
     grid-template-columns: 460px 460px 460px;
     column-gap: 25px;
-    /* row-gap: 4cm; */
+    row-gap: 1cm;
 }
 
 .projets img {
