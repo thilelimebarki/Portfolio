@@ -248,21 +248,13 @@ footer {
     padding: 5px 0;
 }
 
-/* .projets {
+.projets {
     max-width: 1000px;
     margin: 20px 40px 60px 40px;
     display: grid;
     grid-template-columns: 460px 460px 460px;
     column-gap: 25px;
     row-gap: 1cm;
-} */
-.projets {
-    width: 90%;
-    max-width: 1500px;
-    margin: 30px auto 40px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
 }
 
 .projets img {
@@ -458,12 +450,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsive */
-
-
-
 /* Articles grid */
-
 
 .articles-grid {
     display: grid;
@@ -659,69 +646,3 @@ summary {
     }
 }
 
-/* Tablette */
-@media (max-width: 1024px) {
-    body {
-        font-size: 1rem;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .projets {
-        grid-template-columns: repeat(2, 1fr);
-        width: 92%;
-    }
-
-    .projets img {
-        height: 250px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-    header {
-        padding: 15px 10px;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 12px 0;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-    }
-
-    .projets {
-        grid-template-columns: 1fr;
-        width: 90%;
-        margin-bottom: 40px;
-    }
-
-    .projets img {
-        height: 220px;
-    }
-
-    footer {
-        position: static;
-        margin-top: 30px;
-    }
-}
-
-/* Très petits écrans */
-@media (max-width: 400px) {
-    .projets img {
-        height: 180px;
-    }
-
-    .Fiche-presentative {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
