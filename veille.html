@@ -6,6 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Veille technologique</title>
+    <style>
+        /* ===== RESPONSIVE SPÉCIFIQUE À LA PAGE VEILLE ===== */
+
+        /* --- Base : images Feedly côte à côte --- */
+        .abcd {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+
+        .feedly-logo {
+            width: 45%;
+            height: auto;
+            max-width: 600px;
+            margin: 0;
+        }
+
+        .capture-feedly {
+            width: 45%;
+            height: auto;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        /* main-veille : marges confortables sur grand écran */
+        .main-veille {
+            margin: 40px;
+            box-sizing: border-box;
+        }
+
+        /* Grille d'articles : auto-fit déjà définie dans style.css,
+           on s'assure juste que les cartes ne débordent pas */
+        .articles-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* --- Tablette (≤ 900px) --- */
+        @media (max-width: 900px) {
+            .main-veille {
+                margin: 20px;
+            }
+
+            .feedly-logo,
+            .capture-feedly {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .abcd {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin: 4px 8px;
+            }
+        }
+
+        /* --- Mobile (≤ 600px) --- */
+        @media (max-width: 600px) {
+            .main-veille {
+                margin: 12px;
+                padding: 16px;
+                border-radius: 8px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 6px 0;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+
+            .feedly-logo,
+            .capture-feedly {
+                width: 100%;
+                height: auto;
+            }
+
+            .abcd {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .outil-veille {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            details {
+                padding: 8px;
+            }
+
+            footer {
+                position: static;
+            }
+        }
+
+        /* --- Très petit (≤ 380px) --- */
+        @media (max-width: 380px) {
+
+            .main-veille {
+                margin: 8px;
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -31,13 +165,13 @@
         <!-- 1. Introduction -->
         <h2>Qu'est ce que la veille technologique ?</h2>
         <p class="intro">La veille technologique consiste à suivre les évolutions dans le domaine du numérique et de la
-            cybersécurité, afin d’anticiper les nouvelles menaces et opportunités.</p>
+            cybersécurité, afin d'anticiper les nouvelles menaces et opportunités.</p>
 
         <!-- 2. Sujet de veille -->
         <h2>À propos de ma veille</h2>
         <p class="intro">Ma veille porte sur la <strong>cybersécurité</strong>, en particulier sur le
-            <strong>phishing</strong> et l’<strong>ingénierie sociale</strong>. L’objectif est de comprendre ces
-            attaques et d’identifier les solutions de protection adaptées.
+            <strong>phishing</strong> et l'<strong>ingénierie sociale</strong>. L'objectif est de comprendre ces
+            attaques et d'identifier les solutions de protection adaptées.
         </p>
 
         <!-- 3. Outil de veille -->
@@ -45,9 +179,8 @@
         <div class="outil-veille">
             <p>
                 <strong>Feedly</strong> est un agrégateur de flux RSS qui me permet de centraliser
-                différentes sources d’information et de suivre l’actualité en temps réel.
+                différentes sources d'information et de suivre l'actualité en temps réel.
             </p>
-
         </div>
 
         <div class="abcd">
@@ -63,8 +196,6 @@
             <li><a href="https://www.silicon.fr/" target="_blank">Silicon</a></li>
             <li><a href="https://www.zataz.com/" target="_blank">Zataz</a></li>
             <li><a href="https://www.lemagit.fr/" target="_blank">LeMagIT</a></li>
-
-
         </ul>
 
         <!-- 4. Articles -->
@@ -74,8 +205,7 @@
                 <img src="images/Cyber.jpg" alt="Article 1">
                 <div class="card-content">
                     <p class="date">Mars 2026</p>
-                    <h3><a
-                            href="https://www.itpro.com/security/phishing/ai-generated-phishing-became-the-baseline-for-hackers-last-year-kaseya-warns-its-going-to-get-worse-in-2026">AI-generated
+                    <h3><a href="https://www.itpro.com/security/phishing/ai-generated-phishing-became-the-baseline-for-hackers-last-year-kaseya-warns-its-going-to-get-worse-in-2026">AI-generated
                             phishing became the baseline</a></h3>
                 </div>
             </article>
@@ -84,9 +214,8 @@
                 <img src="images/Cyber.jpg" alt="Article 2">
                 <div class="card-content">
                     <p class="date">Décembre 2025</p>
-                    <h3><a
-                            href="https://www.zataz.com/phishing-aux-couleurs-de-letat-une-attaque-discrete-mais-redoutable-decouverte-par-zataz/">Phishing
-                            aux couleurs de l’État</a></h3>
+                    <h3><a href="https://www.zataz.com/phishing-aux-couleurs-de-letat-une-attaque-discrete-mais-redoutable-decouverte-par-zataz/">Phishing
+                            aux couleurs de l'État</a></h3>
                 </div>
             </article>
 
@@ -94,8 +223,7 @@
                 <img src="images/Cyber.jpg" alt="Article 3">
                 <div class="card-content">
                     <p class="date">17 Mars 2026</p>
-                    <h3><a
-                            href="https://www.masecurite.interieur.gouv.fr/fr/fiches-pratiques/numerique/que-faire-en-cas-hameconnage-phishing">Que
+                    <h3><a href="https://www.masecurite.interieur.gouv.fr/fr/fiches-pratiques/numerique/que-faire-en-cas-hameconnage-phishing">Que
                             faire en cas d'hameçonnage (phishing) ?
                         </a></h3>
                 </div>
@@ -105,19 +233,15 @@
                 <img src="images/Cyber.jpg" alt="Article 4">
                 <div class="card-content">
                     <p class="date">06 Mars 2026</p>
-                    <h3><a
-                            href="https://guardia.school/boite-a-outils/le-phishing-la-menace-n-1-en-matiere-de-cybersecurite.html">Le
-                            phishing : la
-                            menace n° 1 en matière de cybersécurité</a></h3>
+                    <h3><a href="https://guardia.school/boite-a-outils/le-phishing-la-menace-n-1-en-matiere-de-cybersecurite.html">Le
+                            phishing : la menace n° 1 en matière de cybersécurité</a></h3>
                 </div>
             </article>
 
             <article class="card">
                 <img src="images/Cyber.jpg" alt="Article 5">
                 <div class="card-content">
-                    <!-- <p class="date">27 Février 2025</p> -->
-                    <h3><a
-                            href="https://www.ihemi.fr/formations/ressources-pedagogiques/kit-de-sensibilisation/les-fragilites-humaines-lingenierie-sociale">Les
+                    <h3><a href="https://www.ihemi.fr/formations/ressources-pedagogiques/kit-de-sensibilisation/les-fragilites-humaines-lingenierie-sociale">Les
                             fragilités humaines : L'ingénierie sociale</a></h3>
                 </div>
             </article>
@@ -125,18 +249,17 @@
             <article class="card">
                 <img src="images/Cyber.jpg" alt="Article 6">
                 <div class="card-content">
-                    <!-- <p class="date">05 septembre 2025</p> -->
-                    <h3><a
-                            href="https://www.cybermalveillance.gouv.fr/medias/2019/02/kit_complet_de_sensibilisation.pdf">KIT
+                    <h3><a href="https://www.cybermalveillance.gouv.fr/medias/2019/02/kit_complet_de_sensibilisation.pdf">KIT
                             de sensibilisation aux risques numériques
                         </a></h3>
                 </div>
             </article>
         </div>
+
         <details>
             <summary>Annexes – bonnes pratiques utilisateur</summary>
             <ul>
-                <li>Vérifier l’expéditeur, l’URL, l’orthographe ; se méfier de l’urgence.</li>
+                <li>Vérifier l'expéditeur, l'URL, l'orthographe ; se méfier de l'urgence.</li>
                 <li>Ne jamais scanner de QR code inconnu sur poste pro.</li>
                 <li>Activer le MFA partout, utiliser un gestionnaire de mots de passe.</li>
             </ul>
@@ -151,7 +274,7 @@
         </details>
     </main>
 
-    <footer> © 2025 MEBARKI Thileli - Portfolio</footer>
+    <footer>© 2025 MEBARKI Thileli - Portfolio</footer>
 </body>
 
 </html>

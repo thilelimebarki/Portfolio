@@ -7,11 +7,187 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>MEBARKI Thileli</title>
+    <style>
+        /* ===== RESPONSIVE SPÉCIFIQUE À LA PAGE ACCUEIL ===== */
+
+        /* --- Base : layout côte à côte image + présentation --- */
+        .image-container {
+            position: absolute;
+            left: 50px;
+            top: 52%;
+            transform: translateY(-50%);
+        }
+
+        .image-container img {
+            width: 300px;
+            border-radius: 50%;
+        }
+
+        .presentation {
+            max-width: 900px;
+            margin: 50px auto;
+            margin-left: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid #dedede;
+            border-radius: 100px;
+        }
+
+        /* Boutons de la section présentation */
+        .cv {
+            margin-left: 20px;
+        }
+
+        /* Carousel en bas, laisse de la place au footer */
+        .carousel {
+            margin-bottom: 60px;
+        }
+
+        /* --- Tablette large (≤ 1100px) --- */
+        @media (max-width: 1100px) {
+            .image-container {
+                left: 20px;
+                top: 52%;
+            }
+
+            .image-container img {
+                width: 220px;
+            }
+
+            .presentation {
+                margin-left: 270px;
+                border-radius: 60px;
+            }
+        }
+
+        /* --- Tablette (≤ 900px) : empilage vertical --- */
+        @media (max-width: 900px) {
+            /* Image centrée au-dessus */
+            .image-container {
+                position: static;
+                transform: none;
+                display: flex;
+                justify-content: center;
+                margin: 20px auto 0;
+            }
+
+            .image-container img {
+                width: 180px;
+            }
+
+            /* Bloc présentation centré, pleine largeur */
+            .presentation {
+                margin: 20px auto;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%;
+                border-radius: 40px;
+                text-align: center;
+            }
+
+            .presentation p {
+                text-align: left;
+            }
+
+            /* Navigation flex-wrap */
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin: 4px 8px;
+            }
+
+            /* Boutons alignés */
+            .cv {
+                margin-left: 0;
+                display: inline-block;
+                margin: 8px 6px;
+            }
+
+            .certifications {
+                margin: 8px 6px;
+            }
+        }
+
+        /* --- Mobile (≤ 600px) --- */
+        @media (max-width: 600px) {
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 6px 0;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+            .image-container {
+                margin: 16px auto 0;
+            }
+
+            .image-container img {
+                width: 140px;
+            }
+
+            .presentation {
+                max-width: 95%;
+                border-radius: 20px;
+                padding: 16px;
+                margin: 16px auto;
+            }
+
+            /* Boutons en colonne */
+            .cv,
+            .certifications {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+                width: fit-content;
+            }
+
+            .carousel-track img {
+                width: 60px;
+                height: 60px;
+                margin: 0 10px;
+            }
+
+            footer {
+                position: static;
+            }
+        }
+
+        /* --- Très petit (≤ 380px) --- */
+        @media (max-width: 380px) {
+
+
+            .image-container img {
+                width: 110px;
+            }
+
+            .presentation {
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <video autoplay muted loop class="background-video">
-        <source src="videofond.mp4" type="video/mp4">    
+        <source src="videofond.mp4" type="video/mp4">
     </video>
     <header>
         <h1>Portfolio MEBARKI Thileli</h1>
@@ -26,35 +202,30 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
     </header>
 
     <div class="image-container">
         <img src="images/avatar.jpg" alt="Photo de MEBARKI Thileli">
     </div>
-    
 
     <section class="presentation">
         <h2>Présentation</h2>
-        <p>Je m’appelle MEBARKI Thileli, je suis diplômée d’un Baccalauréat en Science Expérimentale mention
-            Bien. Actuellement étudiante en BTS SIO (Services Informatiques aux Organisations) option <strong> <abbr title="Solutions logicielles et applications métiers">SLAM</abbr> </strong> au sein de
+        <p>Je m'appelle MEBARKI Thileli, je suis diplômée d'un Baccalauréat en Science Expérimentale mention
+            Bien. Actuellement étudiante en BTS SIO (Services Informatiques aux Organisations) option <strong><abbr title="Solutions logicielles et applications métiers">SLAM</abbr></strong> au sein de
             l'école INSTA et je fais mon alterance au sein du groupe Savencia.
         </p>
-        <p>Je suis passionnée par l’informatique depuis toujours c’est la raison pour laquelle j’ai décide d’en faire
-            un véritable métier et j’ai intégré le BTS SIO.
+        <p>Je suis passionnée par l'informatique depuis toujours c'est la raison pour laquelle j'ai décide d'en faire
+            un véritable métier et j'ai intégré le BTS SIO.
         </p>
-        <p>Ce portefeuille de compétence va faire l’objet de recensement de mes réalisations professionnelles
+        <p>Ce portefeuille de compétence va faire l'objet de recensement de mes réalisations professionnelles
             rencontrées durant ma formation.
         </p>
 
         <a href="pdf/CV_Thileli_MEBARKI.pdf" class="cv" download="CV_Thileli_MEBARKI">Mon CV</a>
         <a href="certifications.html" class="certifications">Mes certifications</a>
         <a href="pdf/Fiches-presentatives/Tableau-de-synthese-Thileli-MEBARKI.xlsx" class="certifications" download="Tableau-de-synthese-Thileli-MEBARKI">Mon tableau de synthèse</a>
-
-        
     </section>
 
-    
     <div class="carousel">
         <div class="carousel-track">
             <img src="logos/HTML.png" alt="HTML">
@@ -62,7 +233,6 @@
             <img src="logos/JavaScript.png" alt="JavaScript">
             <img src="logos/php.webp" alt="PHP">
             <img src="logos/C.png" alt="C#">
-            <!-- <img src="logos/python.webp" alt="python"> -->
             <img src="logos/symfony-removebg-preview.png" alt="symfony">
             <img src="logos/Bootstrap.png" alt="Bootstrap">
             <img src="logos/mysql.png" alt="MySQL">
@@ -72,14 +242,13 @@
             <img src="logos/nexthink.png" alt="nexthink">
             <img src="logos/SCCM.png" alt="SCCM">
             <img src="logos/Wordpress.webp" alt="Wordpress">
-            
-            <!-- Duplique les mêmes images pour créer l'effet infini -->
+
+            <!-- Duplication pour l'effet infini -->
             <img src="logos/HTML.png" alt="HTML">
             <img src="logos/CSS.png" alt="CSS">
             <img src="logos/JavaScript.png" alt="JavaScript">
             <img src="logos/php.webp" alt="PHP">
             <img src="logos/C.png" alt="C#">
-            <!-- <img src="logos/python.webp" alt="python"> -->
             <img src="logos/symfony-removebg-preview.png" alt="symfony">
             <img src="logos/Bootstrap.png" alt="Bootstrap">
             <img src="logos/mysql.png" alt="MySQL">
@@ -89,13 +258,10 @@
             <img src="logos/nexthink.png" alt="nexthink">
             <img src="logos/SCCM.png" alt="SCCM">
             <img src="logos/Wordpress.webp" alt="Wordpress">
-
         </div>
     </div>
 
-    <footer> © 2025 MEBARKI Thileli - Portfolio</footer>
-
+    <footer>© 2025 MEBARKI Thileli - Portfolio</footer>
 </body>
-
 
 </html>

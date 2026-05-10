@@ -5,14 +5,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <title>Certifications</title>
+    <style>
+        /* ===== RESPONSIVE SPÉCIFIQUE À LA PAGE CONTACT ===== */
+
+        /* Base : grille de certificats responsive */
+        .certi {
+            max-width: 95vw;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .certi a {
+            display: block;
+        }
+
+        .certi img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 12px;
+            box-sizing: border-box;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .certi img:hover {
+            transform: scale(1.08);
+        }
+
+        /* Tablette (≤ 900px) → 2 colonnes */
+        @media (max-width: 900px) {
+            .certi {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                padding: 0 15px;
+            }
+
+            .certi img {
+                padding: 8px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin: 4px 8px;
+            }
+        }
+
+        /* Mobile (≤ 600px) → 1 colonne */
+        @media (max-width: 600px) {
+            .certi {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 0 12px;
+                margin: 16px auto;
+            }
+
+            .certi img {
+                padding: 6px;
+                max-width: 100%;
+            }
+
+            header {
+                padding: 14px 10px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+                padding: 0 8px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin: 10px 0 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 6px 0;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+        }
+
+        /* Très petit (≤ 380px) */
+        @media (max-width: 380px) {
+            header h1 {
+                font-size: 1rem;
+            }
+
+            .certi {
+                padding: 0 8px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <video autoplay muted loop class="background-video">
         <source src="videofond.mp4" type="video/mp4">
     </video>
-    
 
     <header>
         <h1>Portfolio MEBARKI Thileli</h1>
@@ -30,38 +141,36 @@
     </header>
 
     <div class="certi">
-        <a href="pdf/Partner-_JavaScript_Essentials_1_-JSE-_certificate_thileli-mebarki.pdf" >
+        <a href="pdf/Partner-_JavaScript_Essentials_1_-JSE-_certificate_thileli-mebarki.pdf">
             <img src="images/javaScript.png" alt="JavaScript">
         </a>
-        <a href="pdf/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_thileli-mebarki.pdf" >
+        <a href="pdf/Partner-_PCAP_-_Programming_Essentials_in_Python_certificate_thileli-mebarki.pdf">
             <img src="images/python.png" alt="Python">
         </a>
-        <a href="pdf/Introduction_to_Cybersecurity_certificate_thileli-mebarki.pdf" >
+        <a href="pdf/Introduction_to_Cybersecurity_certificate_thileli-mebarki.pdf">
             <img src="images/introduction-to-cybersecurity.png" alt="Cybersecurity">
         </a>
-        <a href="pdf/Cybersecurity_Essentials_certificate_thileli-mebarki.pdf" >
+        <a href="pdf/Cybersecurity_Essentials_certificate_thileli-mebarki.pdf">
             <img src="images/cybersecurity-essentials.png" alt="Cybersecurity">
         </a>
-        <a href="pdf/Computer_Hardware_Network_Basics_certificate_thileli-mebarki.pdf" >
+        <a href="pdf/Computer_Hardware_Network_Basics_certificate_thileli-mebarki.pdf">
             <img src="images/Materiel-informatique.png" alt="Materiel-informatique">
         </a>
-        <a href="pdf/Certificat_mooc_module1.pdf" >
+        <a href="pdf/Certificat_mooc_module1.pdf">
             <img src="images/Certificat_mooc_module1.jpg" alt="RGPD1">
         </a>
-        <a href="pdf/Certificat_mooc_module2.pdf" >
+        <a href="pdf/Certificat_mooc_module2.pdf">
             <img src="images/Certificat_mooc_module2.jpg" alt="RGPD2">
         </a>
-        <a href="pdf/Certificat_mooc_module3.pdf" >
+        <a href="pdf/Certificat_mooc_module3.pdf">
             <img src="images/Certificat_mooc_module3.jpg" alt="RGPD3">
         </a>
-        <a href="pdf/Certificat_mooc_module4.pdf" >
+        <a href="pdf/Certificat_mooc_module4.pdf">
             <img src="images/Certificat_mooc_module4.jpg" alt="RGPD4">
         </a>
-        <a href="pdf/Certificat_mooc_module5.pdf" >
+        <a href="pdf/Certificat_mooc_module5.pdf">
             <img src="images/Certificat_mooc_module5.jpg" alt="RGPD5">
         </a>
-
-
     </div>
 </body>
 
